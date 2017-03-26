@@ -24,9 +24,6 @@ object Analitica1 {
     }
 
     val tinicio = System.currentTimeMillis()
-/**    val sparkConf = new SparkConf().setAppName("Analitica1")  */
-/**    val sc = new SparkContext(sparkConf)  */
-/**    val sqlContext = new org.apache.spark.sql.SQLContext(sc)  */
     val spark = SparkSession
       .builder()
       .appName("Analitica1")
@@ -43,8 +40,6 @@ object Analitica1 {
     println ()
 
   /**  Me paso este DataFrame a una tabla: */
-  /**  fichero.registerTempTable("tabla")  */
-  /**  fichero.createGlobalTempView("tabla") */
     fichero.createOrReplaceTempView("tabla")
 
  /**  Consulta SQL para obtener el usuario mas activo     */
