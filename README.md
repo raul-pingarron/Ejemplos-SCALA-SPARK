@@ -3,7 +3,7 @@
 Ejemplos de análisis masivo de datos provenientes de trazas de Reddit con SPARK 1.6 y 2.1
 
 Los ficheros de trazas de Reddit pueden descargarse de
- - https://ia801005.us.archive.org/19/items/2015_reddit_comments_corpus/reddit_data/
+  https://ia801005.us.archive.org/19/items/2015_reddit_comments_corpus/reddit_data/
 
 Para lanzar bajo HDFS:
 ``` 
