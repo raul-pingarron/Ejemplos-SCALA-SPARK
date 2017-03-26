@@ -6,7 +6,7 @@ Los ficheros de trazas de Reddit pueden descargarse de https://ia801005.us.archi
 Para lanzar bajo HDFS:
  spark-submit --num-executors 64 --class "Analitica1" analitica1_XX-YY.jar hdfs:///reddit-file
 
-* NOTA 1:
+* ##### NOTA 1:
 El ejemplo para SPARK 2.1 funciona con Scala 2.11
 
 * NOTA 2:
