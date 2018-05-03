@@ -16,5 +16,5 @@ El ejemplo para SPARK 2.1 funciona con Scala 2.11
 Estos ejemplos están pensados para generar un número importante de operaciones de shuffle con el fin de amplificar la IO a disco, siempre y cuando el numero o tamaño de los ficheros de trazas de Reddit sea suficientemente grande. 
 De la misma manera el impacto en IO a disco en operaciones de lectura es severo, habiéndose generado en distintas pruebas que se han ejecutado througputs de 3 GiB/s (3072 MiB/s) sostenidos durante los 15-20 minutos que ha tarda la ejecución del job.
 
-# Ejemplo de simulación de ingesta dataset DeepLearning
+# Ejemplo micro-benchmark de generación dataset DeepLearning
 Este ejemplo utiliza la MLlib de Spark para generar un vector disperso de enorme tamaño que después se persiste a disco en formato binario parcicionándolo el 100.000 ficheros de pequeño tamaño. ATENCION: Este job está pensado para estresar el subsistema de I/O y en especial la gestión y generación de metadatos (alocación de bloques, RPCs, etc)
