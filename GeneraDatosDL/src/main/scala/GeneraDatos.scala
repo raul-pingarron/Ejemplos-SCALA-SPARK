@@ -1,5 +1,5 @@
 /** Programa para generar ficheros vectoriales dispersos */
-/** R.Pingarron <raul@purestorage.com> */
+/** R.Pingarron <raul.ping4rr0n@gmail.com> */
 
 import org.apache.spark._
 import org.apache.spark.SparkContext._
