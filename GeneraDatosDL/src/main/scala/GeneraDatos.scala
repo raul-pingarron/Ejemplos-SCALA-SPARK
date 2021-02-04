@@ -19,7 +19,7 @@ object GeneraDatos {
     Logger.getLogger("akka").setLevel(Level.OFF)
 
     if (args.length < 1) {
-      System.err.println("Uso: GeneraDatos <RUTA-NFS>")
+      System.err.println("Uso: GeneraDatos <ruta_al_FS>")
       System.exit(1)
     }
 
