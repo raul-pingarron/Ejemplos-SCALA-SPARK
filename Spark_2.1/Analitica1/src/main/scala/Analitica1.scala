@@ -19,7 +19,7 @@ object Analitica1 {
     Logger.getLogger("akka").setLevel(Level.OFF)
 
     if (args.length < 1) {
-      System.err.println("Uso: Analitica1 <RUTA-HDFS_al_fichero>")
+      System.err.println("Uso: Analitica1 <ruta_al_dataset>")
       System.exit(1)
     }
 
@@ -27,7 +27,7 @@ object Analitica1 {
     val spark = SparkSession
       .builder()
       .appName("Analitica1")
-      .config("spark.some.config.option", "some-value")
+      .config("spark.yarn.executor.memoryOverhead", "1536")
       .getOrCreate()
     
     import spark.implicits._
@@ -69,7 +69,7 @@ object Analitica1 {
 
  /** Consulta SQL para sacar los usuarios que entienden de motos:   */
     val df4 = spark.sql("SELECT author FROM tabla WHERE author NOT LIKE '[deleted]' AND body IS NOT NULL AND body LIKE '%motor%' AND body LIKE '%speed%' AND body LIKE '%Ducati%'")
-    df4.rdd.repartition(1).saveAsTextFile("/user/rpingarron/moteros")
+    df4.rdd.repartition(1).saveAsTextFile("/user/rpingarron/resultado")
 
     val tfin = System.currentTimeMillis()
 
